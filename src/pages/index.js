@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className='bg-white px-10'>
         <section className='min-h-screen'>
-          <nav className='py-10 flex justify-between'>
+          <nav className='pt-10 flex justify-between'>
             <h1 className='text-xl'>DEVELOPEDBY</h1>
             <ul className='flex items-center'>
               <li>
@@ -23,18 +23,25 @@ export default function Home() {
               <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li>
             </ul>
           </nav>
-          <div className='text-center p-10'>
+          <div className='text-left p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium'>Adam Ascencio</h2>
             <h3 className='text-2xl py-2'>Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800'>I build things for the web</p>
+            <p className='text-md text-gray-800'>I build things for the web</p>
           </div>
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+          <div className='text-5xl flex justify-center gap-x-16 py-3 text-gray-600'>
             <AiFillTwitterCircle />
             <AiFillGithub />
             <AiFillLinkedin />
           </div>
           <div className='mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96'>
             <Image src={cover} alt='cover photo' />
+          </div>
+        </section>
+        <section className='min-h-screen'>
+          <div className='text-left'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium'>About Me</h2>
+            <p className='text-md py-2 leading-8 text-gray-800'>Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.</p>
+            <p className='text-md py-2 leading-8 text-gray-800'>I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.</p>
           </div>
         </section>
       </main>
