@@ -26,7 +26,7 @@ export default function Home() {
           <div className='text-left p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium'>Adam Ascencio</h2>
             <h3 className='text-2xl py-2'>Developer</h3>
-            <p className='text-md text-gray-800'>I build things for the web</p>
+            <p className='text-md text-gray-800 py-2'>I build things for the web</p>
           </div>
           <div className='text-5xl flex justify-center gap-x-16 py-3 text-gray-600'>
             <AiFillTwitterCircle />
