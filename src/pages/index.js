@@ -44,6 +44,16 @@ export default function Home() {
             <p className='text-md py-2 leading-8 text-gray-800'>I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.</p>
           </div>
         </section>
+        <section className='min-h-screen'>
+          <div className='text-left'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Skills</h2>
+          </div>
+        </section>
+        <section className='min-h-screen'>
+          <div className='text-left'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>
+          </div>
+        </section>
       </main>
     </>
   )
