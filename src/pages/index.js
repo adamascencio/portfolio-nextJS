@@ -3,6 +3,9 @@ import Image from 'next/image';
 import cover from '../../public/cover.jpg';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode } from 'react-icons/fa';
+import { SiMongodb, SiExpress, SiTailwindcss } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 export default function Home() {
   return (
@@ -33,7 +36,7 @@ export default function Home() {
             <AiFillGithub />
             <AiFillLinkedin />
           </div>
-          <div className='mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96'>
+          <div className='mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-16 md:h-96 md:w-96'>
             <Image src={cover} alt='cover photo' />
           </div>
         </section>
@@ -42,6 +45,17 @@ export default function Home() {
             <h2 className='text-5xl py-2 text-teal-600 font-medium'>About Me</h2>
             <p className='text-md py-2 leading-8 text-gray-800'>Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.</p>
             <p className='text-md py-2 leading-8 text-gray-800'>I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.</p>
+          </div>
+          <div className='mt-10 grid place-items-center grid-cols-3 gap-10'>
+            <FaHtml5 className='text-5xl text-red-600' />
+            <FaCss3Alt className='text-5xl text-blue-600' />
+            <FaJs className='text-5xl text-yellow-400' />
+            <SiTailwindcss className='text-5xl text-blue-400' />
+            <FaReact className='text-5xl text-blue-400' />
+            <FaNode className='text-5xl text-green-400' />
+            <SiMongodb className='text-5xl text-green-600' />
+            <SiExpress className='text-5xl text-gray-600' />
+            <TbBrandNextjs className='text-5xl text-black' />
           </div>
         </section>
         <section className='min-h-screen'>
