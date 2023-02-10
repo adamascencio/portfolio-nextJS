@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import cover from '../../public/cover.jpg';
+import project1 from '../../public/project1.jpeg';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode } from 'react-icons/fa';
@@ -59,13 +61,36 @@ export default function Home() {
           </div>
         </section>
         <section className='min-h-screen'>
-          <div className='text-left'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Skills</h2>
-          </div>
-        </section>
-        <section className='min-h-screen'>
-          <div className='text-left'>
+          <div className='text-left grid auto-rows-auto gap-4'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>
+            <div className='flex justify-between'>
+              <h3 className='text-2xl mb-5'>Travel Buddy</h3>
+              <div className='text-right mt-auto'>
+                <ul>
+                  <Link 
+                    href='https://travel-bud-react.netlify.app/'
+                    target="_blank" 
+                    rel="noreferrer noopener"
+                  >
+                    <li>View Deployed App</li>
+                  </Link>
+                  <Link 
+                    href='https://github.com/adamascencio/Travel-App'
+                    target="_blank" 
+                    rel="noreferrer noopener"
+                  >
+                    <li>Source Code</li>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+            <div className='grid gap-5'>
+              <p>A web app to find restaurants, hotels, and attractions in a given city.</p>
+              <p>React, Node.js, Google Maps API, Google Autocomplete, Travel Advisor API</p>
+            </div>
+            <div className='justify-self-end'>
+              <Image src={project1} alt='travel buddy screenshot' />
+            </div>
           </div>
         </section>
       </main>
