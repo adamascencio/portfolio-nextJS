@@ -2,7 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import cover from '../../public/cover.jpg';
-import project1 from '../../public/project1.jpeg';
+import project1 from '../../public/travel-buddy.jpeg';
+import project2 from '../../public/homecourt.png';
+import project3 from '../../public/powerlist.png';
+import project4 from '../../public/blackjack.png';
+import { projects } from '../../src/config';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode } from 'react-icons/fa';
@@ -10,6 +14,47 @@ import { SiMongodb, SiExpress, SiTailwindcss } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 
 export default function Home() {
+  const projectImages = [project1, project2, project3, project4];
+  const projectSections = projects.map((project, idx) => (
+    <section key={idx} className='min-h-screen'>
+      <div className='text-left grid auto-rows-auto gap-4'>
+        {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>}
+        <div className='flex justify-between'>
+          <h3 className='text-2xl mb-5'>{project.name}</h3>
+          <div className='text-right mt-auto'>
+            <ul>
+              <Link 
+                href={project.href}
+                target="_blank" 
+                rel="noreferrer noopener"
+              >
+                <li>View Deployed App</li>
+              </Link>
+              <Link 
+                href={project.github}
+                target="_blank" 
+                rel="noreferrer noopener"
+              >
+                <li>Source Code</li>
+              </Link>
+            </ul>
+          </div>
+        </div>
+        <div className='grid gap-5'>
+          <p>{project.description}</p>
+          <p>{project.tech.join(', ')}</p>
+        </div>
+        <div className='place-self-center'>
+          <Image 
+            src={projectImages[idx]} 
+            alt={`${project.name} screenshot`} 
+            width={'auto'}
+            height={'auto'}
+          />
+        </div>
+      </div>
+    </section>
+  ));
   return (
     <>
       <Head>
@@ -60,39 +105,7 @@ export default function Home() {
             <TbBrandNextjs className='text-5xl text-black' />
           </div>
         </section>
-        <section className='min-h-screen'>
-          <div className='text-left grid auto-rows-auto gap-4'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>
-            <div className='flex justify-between'>
-              <h3 className='text-2xl mb-5'>Travel Buddy</h3>
-              <div className='text-right mt-auto'>
-                <ul>
-                  <Link 
-                    href='https://travel-bud-react.netlify.app/'
-                    target="_blank" 
-                    rel="noreferrer noopener"
-                  >
-                    <li>View Deployed App</li>
-                  </Link>
-                  <Link 
-                    href='https://github.com/adamascencio/Travel-App'
-                    target="_blank" 
-                    rel="noreferrer noopener"
-                  >
-                    <li>Source Code</li>
-                  </Link>
-                </ul>
-              </div>
-            </div>
-            <div className='grid gap-5'>
-              <p>A web app to find restaurants, hotels, and attractions in a given city.</p>
-              <p>React, Node.js, Google Maps API, Google Autocomplete, Travel Advisor API</p>
-            </div>
-            <div className='justify-self-end'>
-              <Image src={project1} alt='travel buddy screenshot' />
-            </div>
-          </div>
-        </section>
+        {projectSections}
       </main>
     </>
   )
