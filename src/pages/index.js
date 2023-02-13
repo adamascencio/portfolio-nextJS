@@ -16,7 +16,7 @@ import { TbBrandNextjs } from 'react-icons/tb';
 export default function Home() {
   const projectImages = [project1, project2, project3, project4];
   const projectSections = projects.map((project, idx) => (
-    <section key={idx} className='min-h-screen'>
+    <section key={idx} className='min-h-screen py-10'>
       <div className='text-left grid auto-rows-auto gap-4'>
         {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>}
         <div className='flex justify-between'>
@@ -28,14 +28,14 @@ export default function Home() {
                 target="_blank" 
                 rel="noreferrer noopener"
               >
-                <li>View Deployed App</li>
+                <li className='underline text-sm'>View Deployed App</li>
               </Link>
               <Link 
                 href={project.github}
                 target="_blank" 
                 rel="noreferrer noopener"
               >
-                <li>Source Code</li>
+                <li className='underline text-sm'>Source Code</li>
               </Link>
             </ul>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
             <Image src={cover} alt='cover photo' />
           </div>
         </section>
-        <section className='min-h-screen'>
+        <section className='min-h-screen py-10'>
           <div className='text-left'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium'>About Me</h2>
             <p className='text-md py-2 leading-8 text-gray-800'>Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.</p>
@@ -106,6 +106,9 @@ export default function Home() {
           </div>
         </section>
         {projectSections}
+        <footer>
+          <div className='text-center'></div>
+        </footer>
       </main>
     </>
   )
