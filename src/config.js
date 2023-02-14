@@ -29,4 +29,8 @@ module.exports = {
       github: 'https://github.com/adamascencio/Blackjack'
     }
   ],
+  contact: {
+    email: 'ascencioadam@gmail.com',
+    location: 'Los Angeles, CA',
+  }
 }
