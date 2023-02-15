@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cover from '../../public/cover.jpg';
 import Projects from '../components/Projects';
-import Contact from '../components/Contact';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode } from 'react-icons/fa';
@@ -62,7 +61,6 @@ export default function Home() {
           </div>
         </section>
         <Projects />
-        <Contact />
       </main>
     </>
   )
