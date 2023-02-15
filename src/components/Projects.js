@@ -10,7 +10,7 @@ import project4 from '../../public/blackjack.png';
 export default function Projects() {
   const projectImages = [project1, project2, project3, project4];
   const projectSections = projects.map((project, idx) => (
-    <section key={idx} className={`min-h-screen py-10`}>
+    <section key={idx} className={`min-h-screen py-10 dark:text-white`}>
       <div className='text-left grid auto-rows-auto gap-4'>
         {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>}
         <div className='flex justify-between'>
