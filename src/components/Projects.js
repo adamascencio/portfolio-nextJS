@@ -38,13 +38,16 @@ export default function Projects() {
           <p>{project.description}</p>
           <p>{project.tech.join(', ')}</p>
         </div>
-        <div className='place-self-center'>
-          <Image 
-            src={projectImages[idx]} 
-            alt={`${project.name} screenshot`} 
-            width={'100%'}
-            height={'100%'}
-          />
+        <div>
+          <div className='relative w-4/5 mx-auto mt-5 max-w-xs'>
+            <Image 
+              src={projectImages[idx]} 
+              alt={`${project.name} screenshot`} 
+              width={'100%'}
+              height={'100%'}
+              className='rounded-lg'
+            />
+          </div>
         </div>
       </div>
       {idx === 3 && <Contact />}
