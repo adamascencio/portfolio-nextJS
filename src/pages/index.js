@@ -67,8 +67,12 @@ export default function Home() {
         <section className='min-h-screen py-10'>
           <div className='text-left max-w-xl'>
             <h2 className='text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>About Me</h2>
-            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.</p>
-            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.</p>
+            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
+              Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.
+            </p>
+            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
+              I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.
+            </p>
           </div>
           <div className='mt-10 grid place-items-center grid-cols-3 gap-10'>
             <FaHtml5 className='text-5xl text-red-600' />
