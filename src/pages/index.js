@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cover from '../../public/cover.jpg';
 import Projects from '../components/Projects';
+import { contact } from '../config';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -27,7 +28,15 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2x dark:text-white'/>
               </li>
-              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li>
+              <li>
+                <a 
+                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' 
+                  href={contact.resume} 
+                  target='_blank' 
+                  rel='noreferrer noopener'>
+                Resume
+                </a>
+              </li>
             </ul>
           </nav>
           <div className='text-left p-8 md:text-center'>
@@ -36,8 +45,20 @@ export default function Home() {
             <p className='text-md text-gray-800 py-2 md:text-xl dark:text-white'>I build things for the web</p>
           </div>
           <div className='text-5xl flex justify-center gap-x-16 py-3 text-gray-600 dark:text-white'>
+          <Link 
+            href={contact.github}
+            target='_blank'
+            rel='noreferrer noopener'
+          >
             <AiFillGithub />
+          </Link>
+          <Link 
+            href={contact.linkedin}
+            target='_blank'
+            rel='noreferrer noopener'
+          >
             <AiFillLinkedin />
+          </Link>
           </div>
           <div className='mx-auto rounded-full w-80 h-80 relative overflow-hidden mt-7 md:h-96 md:w-96'>
             <Image src={cover} alt='cover photo' />

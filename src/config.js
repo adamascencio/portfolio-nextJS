@@ -32,5 +32,8 @@ module.exports = {
   contact: {
     email: 'ascencioadam@gmail.com',
     location: 'Los Angeles, CA',
+    github: 'https://github.com/adamascencio',
+    linkedin: 'https://www.linkedin.com/in/adamadevs/',
+    resume: 'https://docs.google.com/document/d/1UhfsMUawFAom5kV-X51kB7e3BQL0Fv4Jxk3HL-jNQS4/edit?usp=sharing'
   }
 }
