@@ -18,12 +18,14 @@ export default function Home() {
       <Head>
         <title>Adam Ascencio Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+      <div className='max-w-xl mx-auto'>
+        {/* cover section */}
         <section className='min-h-screen'>
           <nav className='pt-7 flex justify-between'>
-            <h1 className='text-xl dark:text-white'>DEVELOPEDBY</h1>
+            <h1 className='text-xl dark:text-white'>DEVELOPED BY</h1>
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2x dark:text-white'/>
@@ -41,7 +43,7 @@ export default function Home() {
           </nav>
           <div className='text-left p-8 md:text-center'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400'>Adam Ascencio</h2>
-            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Developer</h3>
+            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Front End Developer</h3>
             <p className='text-md text-gray-800 py-2 md:text-xl dark:text-white'>I build things for the web</p>
           </div>
           <div className='text-5xl flex justify-center gap-x-16 py-3 text-gray-600 dark:text-white'>
@@ -64,9 +66,10 @@ export default function Home() {
             <Image src={cover} alt='cover photo' />
           </div>
         </section>
+        {/* about section */}
         <section className='min-h-screen py-10'>
           <div className='text-left max-w-xl'>
-            <h2 className='text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>About Me</h2>
+            <h2 className='text-4xl md:text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>About Me</h2>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
               Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.
             </p>
@@ -74,7 +77,7 @@ export default function Home() {
               I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.
             </p>
           </div>
-          <div className='mt-10 grid place-items-center grid-cols-3 gap-10'>
+          <div className='mt-16 grid place-items-center grid-cols-3 gap-10 max-w-lg mx-auto'>
             <FaHtml5 className='text-5xl text-red-600' />
             <FaCss3Alt className='text-5xl text-blue-600' />
             <FaJs className='text-5xl text-yellow-400' />
@@ -87,6 +90,7 @@ export default function Home() {
           </div>
         </section>
         <Projects />
+        </div>
       </main>
     </div>
   )

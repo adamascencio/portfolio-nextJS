@@ -12,9 +12,9 @@ export default function Projects() {
   const projectSections = projects.map((project, idx) => (
     <section key={idx} className={`min-h-screen py-10 dark:text-white`}>
       <div className='text-left grid auto-rows-auto gap-4'>
-        {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>Projects</h2>}
+        {idx === 0 && <h2 className='text-4xl md:text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>Projects</h2>}
         <div className='flex justify-between'>
-          <h3 className='text-2xl font-medium self-center'>{project.name}</h3>
+          <h3 className='text-2xl font-medium self-center md:text-3xl lg:text-4xl'>{project.name}</h3>
           <div className='text-center mt-auto'>
             <ul className='text-sm grid gap-2'>
               <Link 
@@ -34,7 +34,7 @@ export default function Projects() {
             </ul>
           </div>
         </div>
-        <div className='grid gap-5'>
+        <div className='mt-2 grid gap-5 max-w-md'>
           <p>{project.description}</p>
           <p>{project.tech.join(', ')}</p>
         </div>
