@@ -40,7 +40,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className='text-left p-8 md:text-center'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Adam Ascencio</h2>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400'>Adam Ascencio</h2>
             <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Developer</h3>
             <p className='text-md text-gray-800 py-2 md:text-xl dark:text-white'>I build things for the web</p>
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
         <section className='min-h-screen py-10'>
           <div className='text-left max-w-xl'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>About Me</h2>
+            <h2 className='text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>About Me</h2>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Hi! I&apos;m Adam and I love building things for the web. My passion for coding was sparked when I built my first cat photo app on FreeCodeCamp. I&apos;ve been hooked ever since.</p>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>I&apos;m looking to work on consumer-facing products that improve people&apos;s lives. I&apos;ve recently completed a full-stack software engineering bootcamp. See below for some of the technologies I&apos;ve been working with recently.</p>
           </div>

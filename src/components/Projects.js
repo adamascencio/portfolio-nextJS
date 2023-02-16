@@ -12,15 +12,16 @@ export default function Projects() {
   const projectSections = projects.map((project, idx) => (
     <section key={idx} className={`min-h-screen py-10 dark:text-white`}>
       <div className='text-left grid auto-rows-auto gap-4'>
-        {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 font-medium'>Projects</h2>}
+        {idx === 0 && <h2 className='text-5xl py-2 text-teal-600 dark:text-teal-400 font-medium'>Projects</h2>}
         <div className='flex justify-between'>
-          <h3 className='text-2xl mb-5'>{project.name}</h3>
+          <h3 className='text-2xl mb-5 font-medium'>{project.name}</h3>
           <div className='text-right mt-auto'>
             <ul>
               <Link 
                 href={project.href}
                 target="_blank" 
                 rel="noreferrer noopener"
+                className='dark:text-teal-300'
               >
                 <li className='underline text-sm'>View Deployed App</li>
               </Link>
@@ -28,6 +29,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank" 
                 rel="noreferrer noopener"
+                className='dark:text-teal-300'
               >
                 <li className='underline text-sm'>Source Code</li>
               </Link>
